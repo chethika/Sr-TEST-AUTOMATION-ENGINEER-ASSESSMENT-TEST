@@ -1,5 +1,5 @@
-# REST API Automation Tests
-Chethika Dithmal
+# REST API Automation Tests - Chethika Dithmal
+
 This project contains automated API tests written in **C# using .NET 8 and xUnit** to validate CRUD operations of the API available at:
 
 https://restful-api.dev
@@ -15,6 +15,7 @@ The tests verify that the API correctly supports creating, retrieving, updating,
 - xUnit
 - RestSharp
 - Newtonsoft.Json
+- JetBrains Rider
 
 ---
 
@@ -34,97 +35,76 @@ RestApiTests
 │  
 └── README.md  
 
-### Folder Description
-
-Helpers  
-Contains the API client used to send HTTP requests.
-
-Models  
-Contains the request body models used for serialization.
-
-Tests  
-Contains positive and negative API test scenarios.
-
 ---
 
 ## Test Scenarios
 
-### Positive Tests
+### Positive Test Cases
 
 1. Get list of all objects
 2. Add a new object using POST
-3. Get a single object using the created ID
-4. Update the object
+3. Get the created object by ID
+4. Update the created object
 5. Delete the object
 
-### Negative Tests
+### Negative Test Cases
 
-1. Get object with invalid ID
-2. Delete object with invalid ID
-3. Update object with invalid ID
+1. Get object with an invalid ID
+2. Delete object with an invalid ID
+3. Update object with an invalid ID
+4. Create object with invalid data
 
 ---
 
 ## Setup Instructions
 
 ### 1. Clone the repository
+
+
 git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY_NAME.git
 
 
-### 2. Navigate to the project folder
+### 2. Open the project in JetBrains Rider
 
+Open Rider → **File → Open** → select the project folder.
 
-cd RestApiTests
+Rider will automatically restore the NuGet dependencies.
 
+---
 
-### 3. Restore dependencies
+### 3. Configure API Key
 
-
-dotnet restore
-
-
-### 4. Configure API Key
-
-Open the following file:
+Open the file:
 
 
 Helpers/ApiClient.cs
 
 
-Replace the placeholder API key with your own key:
+Replace the API key placeholder with your API key.
 
 
 private const string ApiKey = "YOUR_API_KEY";
 
 
-You can obtain an API key by creating an account at:
+You can create an API key by signing up at:
 
 https://restful-api.dev
 
 ---
 
-### 5. Run the tests
+## Running the Tests (Using Rider)
 
-Run the following command:
+1. Open the project in Rider.
+2. Navigate to the **Tests** folder.
+3. Open **ApiTests.cs** or **NegativeTests.cs**.
+4. Click the **Run (▶) icon** next to the test class or method.
 
+You can also run all tests from the **Unit Tests window**.
 
-dotnet test
-
-
-You can also run the tests directly from Rider or Visual Studio.
+When executed successfully, the test runner will show all tests as **passed**.
 
 ---
 
 ## Notes
 
-The `bin` and `obj` folders are excluded from the repository because they contain compiled build files that are generated automatically during the build process.
-Before uploading manually to GitHub
-
-Make sure you delete these folders from your project before uploading:
-
-bin
-obj
-.idea
-.vs
-
-These are build files and should not be included in the repository.
+The folders `bin` and `obj` are excluded from the repository because they contain compiled build files generated automatically during the build process.
