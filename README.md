@@ -22,17 +22,13 @@ The tests verify that the API correctly supports creating, retrieving, updating,
 ## Project Structure
 
 RestApiTests  
-│  
 ├── Helpers  
-│   └── ApiClient.cs  
-│  
+│   └── ApiClient.cs   
 ├── Models  
 │   └── ObjectModel.cs  
-│  
 ├── Tests  
 │   ├── ApiTests.cs  
-│   └── NegativeTests.cs  
-│  
+│   └── NegativeTests.cs    
 └── README.md  
 
 ---
